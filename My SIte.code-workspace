@@ -1,0 +1,25 @@
+{
+  "folders": [
+	{
+		"path": "../My SIte"
+	},
+	{
+		"path": "../Star Pizza"
+	},
+	{
+		"path": "."
+	},
+	{
+		"path": "../WEB_S2"
+	},
+	{
+		"path": "../WEB_S2_Colors"
+	},
+	{
+		"path": "../WEB_S2_box_model"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Katrine's Website"
+  }
+}

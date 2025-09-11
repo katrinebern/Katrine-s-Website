@@ -1,6 +1,7 @@
 table,
 th,
 td {
+  background: #ffe5ec;
   border: 1px, solid black;
   padding: 10px;
   border-collapse: collapse;
@@ -15,10 +16,13 @@ body {
 }
 
 h1 {
+  background: #ffe5ec;
+  border: 5px dotted #00401a;
+  padding: 1%;
   color: #00401a;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 h2 {
@@ -36,4 +40,13 @@ nav {
   color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1rem;
+}
+
+.lille {
+  background: #00401a;
+}
+
+figcaption {
+  background: #ffe5ec;
+  color: #00401a;
 }
