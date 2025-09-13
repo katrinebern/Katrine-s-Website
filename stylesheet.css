@@ -1,48 +1,169 @@
-table,
-th,
-td {
-  background: #ffe5ec;
-  border: 1px, solid black;
-  padding: 10px;
-  border-collapse: collapse;
-  text-align: center;
-  color: black;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1rem;
+/* ===== Farvepalette generel ===== */
+:root {
+  --pink: #ffe5ec;
+  --mint: #f0fff0;
+  --green: #00401a;
+  --text: #000;
+  --border: #00401a;
+  --hover: #f7bfd3;
 }
 
+/* ==== Border-box ==== */
+/* border-box i stedet for content-box */
+* {
+  box-sizing: border-box;
+}
+
+/* ==== Nav ==== */
+/* Topmenuen - .site-nav */
+.site-nav {
+  background: var(--pink);
+  border: 1px solid var(--green);
+  padding: 0.5rem 1rem;
+}
+.site-nav a {
+  /* selector som gælder for links (a) inde et element med klassen .site-nav */
+  color: var(--green); /* henter farvevariablen fra root */
+  text-decoration: none; /* fjerner understregning */
+  font-weight: 600; /* tykkelse på skrift */
+  margin-right: 1rem; /* afstand mellem href's */
+  padding: 0.4rem 0.6rem; /* gør klikområdet større, så man ikke skal ramme direkte på bogstaverne */
+  border-radius: 0.3rem; /* afrundede hjørner */
+}
+.site-nav a:hover {
+  background: var(--hover);
+} /* selector som gælder for links (a) inde et element med klassen .site-nav når musen holdes over */
+.site-nav a.active,
+.site-nav a[aria-current="page"] {
+  background: var(--green);
+  color: #fff;
+} /* markerer den side, man er på - aria brugt for senere udvidelse med java script for tilgængelighed (højtlæsning ved hover for synsbesværede) */
+
+/* Aktiv side */
+nav a.active,
+nav a[aria-current="page"] {
+  background: var(--green); /* grøn baggrund */
+  color: var(--pink); /* henter farvevariablen fra root */
+}
+
+/* ==== Body ====*/
 body {
-  background: #f0fff0;
+  margin: 1rem; /* mængden af "luft" i margin */
+  background: var(--mint); /* baggrundsfarve */
+  color: var(--text); /* standardfarven på tekst medmindre denne overrides */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
 }
 
+/* ==== Overskrifter ==== */
 h1 {
-  background: #ffe5ec;
-  border: 5px dotted #00401a;
-  padding: 1%;
-  color: #00401a;
+  font-size: clamp(
+    2rem,
+    6vw,
+    4rem
+  ); /* Gør skrifttypen responsiv, så den tilpasser sig forskellige skærmstørrelser - se noter i OneNote for uddybning */
+  color: var(--green); /* henter farvevariablen fra root */
+  background: var(--pink); /* henter farvevariablen fra root */
+  border: 5px dotted var(--green); /* henter farvevariablen fra root */
+  padding: 1rem;
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 4rem;
+  margin: 1rem 0rem; /* Giver luft rundt om h1 - 1rem over og under, 0 i siderne */
 }
 
 h2 {
   color: #00401a;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.5rem;
+  color: var(--green); /* henter farvevariablen fra root */
 }
 
+/* ==== Tekst + lister ==== */
 p,
 li,
 ul,
 figure,
 footer,
 nav {
-  color: black;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--text); /* henter farvevariablen fra root */
   font-size: 1rem;
 }
 
+/* ==== Billeder ==== */
+/* Skalering af billeder */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+}
+/* max 100% af den box den er i (skalerer auto. op/ned på billedet, hvis box str. ændrer sig), højde følger auto størrelsesjusteringer, 
+      rundede hjørner på billeder, laver pics til block i stedet for inline elementer (behandles som e.g. <div> osv.) */
+
+/* Billedtekst */
 figcaption {
-  background: #ffe5ec;
+  background: var(--pink); /* henter farvevariablen fra root */
+  color: var(--green); /* henter farvevariablen fra root */
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem; /* afrunder hjørner på baggrundsboksen */
+}
+
+/* ==== Table ==== */
+table {
+  width: 100%; /* 100% af den box den er i */
+  border-collapse: collapse; /* fjerner dobbelt linje i tabel */
+  background: var(--pink); /* henter farvevariablen fra root */
+  margin: 1rem 0rem; /* Giver luft rundt om table - 1rem over og under, 0rem i siderne */
+  font-size: 1rem;
+}
+
+th,
+td {
+  border: 1px solid var(--border); /* henter farvevariablen fra root */
+  padding: 10px;
+  text-align: center;
+  font-weight: 700; /* tykkelse på skrift */
   color: #00401a;
+}
+
+th {
+  background: #ffd7e3; /* kontrast for læsbarhed af tabel */
+  font-weight: 700; /* tykkelse på skrift */
+  color: #00401a;
+}
+
+tbody tr:hover {
+  background: #ffeef3;
+} /* hover pseudoklasse, der aktiveres når man hover musen over */
+
+/* Gør store billeder i tabellen mere kompakte */
+table img {
+  /* alle billeder der ligger i tabellen */
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* img fylder hele "box" uden at blive strukket/forvrænget */
+}
+
+/* Links i tabel */
+nav a {
+  color: var(--green); /* henter farvevariablen fra root */
+  text-decoration: none; /* fjerner understregning */
+  font-weight: 600; /* tykkelse på skrift */
+  margin-right: 1rem; /* afstand mellem href's */
+  padding: 0.4rem 0.6rem; /* gør klikområdet større, så man ikke skal ramme direkte på bogstaverne */
+  border-radius: 0.3rem; /* afrundede hjørner */
+}
+
+/* Hover-effekt i tabel */
+nav a:hover {
+  background: var(--hover); /* lysere pink når musen er over */
+}
+
+/* ==== Footer ==== */
+footer {
+  margin-top: 2rem; /* luft over footer */
+  padding: 1rem 0rem;
+  text-align: center;
+  color: var(--green); /* henter farvevariablen fra root */
+  background: #ffffff80;
+  border: 1px solid #d1d5db; /* tynd linje over footer for adskillelse */
 }
