@@ -1,7 +1,7 @@
 /* ===== Farvepalette generel ===== */
 :root {
   --pink: #ffe5ec;
-  --mint: #f0fff0;
+  --background: #ffffff;
   --green: #00401a;
   --text: #000;
   --border: #00401a;
@@ -18,7 +18,7 @@
 /* Topmenuen - .site-nav */
 .site-nav {
   background: var(--pink);
-  border: 1px solid var(--green);
+  border: 5px solid var(--green);
   padding: 0.5rem 1rem;
 }
 .site-nav a {
@@ -49,7 +49,7 @@ nav a[aria-current="page"] {
 /* ==== Body ====*/
 body {
   margin: 1rem; /* mængden af "luft" i margin */
-  background: var(--mint); /* baggrundsfarve */
+  background: var(--background); /* baggrundsfarve */
   color: var(--text); /* standardfarven på tekst medmindre denne overrides */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5;
@@ -64,7 +64,7 @@ h1 {
   ); /* Gør skrifttypen responsiv, så den tilpasser sig forskellige skærmstørrelser - se noter i OneNote for uddybning */
   color: var(--green); /* henter farvevariablen fra root */
   background: var(--pink); /* henter farvevariablen fra root */
-  border: 5px dotted var(--green); /* henter farvevariablen fra root */
+  border: 5px solid var(--green); /* henter farvevariablen fra root */
   padding: 1rem;
   text-align: center;
   margin: 1rem 0rem; /* Giver luft rundt om h1 - 1rem over og under, 0 i siderne */
@@ -165,5 +165,5 @@ footer {
   text-align: center;
   color: var(--green); /* henter farvevariablen fra root */
   background: #ffffff80;
-  border: 1px solid #d1d5db; /* tynd linje over footer for adskillelse */
+  border: 5px solid var(--green); /* tynd linje over footer for adskillelse */
 }
