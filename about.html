@@ -5,68 +5,94 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
-
   <body>
-    <header>
-      <h1>About Me</h1>
-      <nav class="site-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html" aria-current="page">About</a>
-        <a href="interests.html">Interests</a>
-      </nav>
-    </header>
+    <div class="wrapper">
+      <header>
+        <h1>About Me</h1>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="interests.html">Interests</a>
+        </nav>
+      </header>
 
-    <main>
-      <section>
-        <h2>Who am I?</h2>
-        <p>
-          My name is Katrine, I'm 25 years old, originally from Vejle and now
-          living in Aarhus.
-        </p>
-      </section>
+      <aside class="left-side section">
+        <figure class="sidebar-figure">
+          <img src="chiken&waffles_breakfast.jpg" alt="Chicken & Waffles" />
+          <figcaption>
+            <p class="sidebar-p">Chicken & Waffles - Breakfast</p>
+            <p class="sidebar-p">kcal: EKSTREMT mange</p>
+            <p class="sidebar-p">Kalamazoo, Michigan USA</p>
+          </figcaption>
+        </figure>
+      </aside>
 
-      <section>
-        <h2>Why I chose VIA</h2>
-        <article>
+      <main>
+        <section>
+          <h2>Who am I?</h2>
           <p>
-            I'm currently studying Global Business Engineering at VIA University
-            College. I chose this program because it combines my interest in
-            technology, business, and working in international environments. I
-            believe this education will give me opportunities to work globally
-            in the future. I chose SW as my speciality because I have previously
-            experienced how SW solutions have not been implemented effectively.
+            My name is Katrine, I'm 25 years old, originally from Vejle and now
+            living in Aarhus.
           </p>
-        </article>
-      </section>
-    </main>
+        </section>
+        <section>
+          <h2>Why I chose VIA</h2>
+          <article>
+            <p>
+              I'm currently studying Global Business Engineering at VIA
+              University College. I chose this program because it combines my
+              interest in technology, business, and working in international
+              environments. I believe this education will give me opportunities
+              to work globally in the future. I chose SW as my speciality
+              because I have previously experienced how SW solutions have not
+              been implemented effectively.
+            </p>
+          </article>
+        </section>
+      </main>
 
-    <footer>
-      <h2>Click or scan the QR codes to be redirected</h2>
-
-      <div>
-        <figure style="display: inline-block; text-align: center; margin: 10px">
-          <a href="mailto:342857@via.dk" target="_blank">
-            <img
-              src="mailto_qr_hd.gif"
-              alt="QR code to send me an email"
-              width="200"
-            />
-          </a>
-          <figcaption>Email</figcaption>
+      <!-- right side-section -->
+      <aside class="right-side section">
+        <figure class="sidebar-figure">
+          <img src="macncheese_burger.jpg" alt="Burger" />
+          <figcaption>
+            <p class="sidebar-p">Mac'n'Cheese, Beef & Pulled Pork Burger</p>
+            <p class="sidebar-p">kcal: EKSTREMT mange</p>
+            <p class="sidebar-p">South Bend, Indiana USA</p>
+          </figcaption>
         </figure>
+      </aside>
 
-        <figure style="display: inline-block; text-align: center; margin: 10px">
-          <a href="https://www.instagram.com/katrinebern/" target="_blank">
-            <img
-              src="instagram_qr.gif"
-              alt="QR code to my Instagram profile"
-              width="200"
-            />
-          </a>
-          <figcaption>Instagram</figcaption>
-        </figure>
-      </div>
-      <small>© 2025 Katrine</small>
-    </footer>
+      <footer>
+        <h2>Click or scan the QR codes to be redirected</h2>
+        <div>
+          <figure
+            style="display: inline-block; text-align: center; margin: 10px"
+          >
+            <a href="mailto:342857@via.dk" target="_blank">
+              <img
+                src="mailto_qr_hd.gif"
+                alt="QR code to send me an email"
+                width="200"
+              />
+            </a>
+            <figcaption>Email</figcaption>
+          </figure>
+          <figure
+            style="display: inline-block; text-align: center; margin: 10px"
+          >
+            <a href="https://www.instagram.com/katrinebern/" target="_blank">
+              <img
+                src="instagram_qr.gif"
+                alt="QR code to my Instagram profile"
+                width="200"
+              />
+            </a>
+            <figcaption>Instagram</figcaption>
+          </figure>
+        </div>
+        <small>© 2025 Katrine</small>
+      </footer>
+    </div>
   </body>
 </html>

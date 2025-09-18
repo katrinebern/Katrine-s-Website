@@ -7,6 +7,7 @@
   </head>
 
   <body>
+    <div class="wrapper">
       <header>
         <h1>Welcome!</h1>
         <nav class="site-nav">
@@ -14,18 +15,20 @@
           <a href="about.html">About</a>
           <a href="interests.html">Interests</a>
         </nav>
-        <p>
-          Please feel free to shuffle around the pages to find out more about me
-          and what I love to do when not studying!
-        </p>
       </header>
+
+      <aside class="left-side section">
+        <figure class="sidebar-figure">
+          <img src="lange_pølser.jpg" alt="Lange pølser" />
+          <figcaption>Lange Pølser - Fleggaard, Tyskland</figcaption>
+        </figure>
+      </aside>
 
       <main>
         <section aria-labelledby="intro-title">
           <!-- Sections the page for screen reading services e.g. "Section: Welcome".-->
           <h2 id="intro-title">Welcome</h2>
           <!-- Gives title a unique ID -->
-
           <article>
             <p>
               I'm 25 years old and currently starting my 5th semester on GBE at
@@ -34,10 +37,8 @@
               engineer, and also showing what I like to do when I'm not in
               school or doing homework.
             </p>
-            <!-- maybe picture here?-->
           </article>
         </section>
-
         <section aria-labelledby="intro-title">
           <h2 id="quick-facts-title">Quick Facts</h2>
           <ul>
@@ -48,49 +49,16 @@
         </section>
       </main>
 
-      <section>
-        <h2>My Weekly Schedule</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Day</th>
-              <th>Morning</th>
-              <th>Afternoon</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Mon</td>
-              <td>SSM</td>
-              <td>Free</td>
-            </tr>
-            <tr>
-              <td>Tue</td>
-              <td>DBS</td>
-              <td>Free</td>
-            </tr>
-            <tr>
-              <td>Wed</td>
-              <td>WEB</td>
-              <td>Free</td>
-            </tr>
-            <tr>
-              <td>Thu</td>
-              <td>Study</td>
-              <td>Free</td>
-            </tr>
-            <tr>
-              <td>Fri</td>
-              <td>Study</td>
-              <td>Free</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+      <!-- right side-section -->
+      <aside class="right-side section">
+        <figure class="sidebar-figure">
+          <img src="lange_skumfiduser.jpg" alt="Lange skumfiduser" />
+          <figcaption>Lange Skumfiduser - St. Tropez, Frankrig</figcaption>
+        </figure>
+      </aside>
 
       <footer>
         <h2>Click or scan the QR codes to be redirected</h2>
-
         <div>
           <figure
             style="display: inline-block; text-align: center; margin: 10px"
@@ -102,9 +70,8 @@
                 width="200"
               />
             </a>
-            <figcaption>Email</figcaption>
+            <figcaption class="figcaption-footer">Email</figcaption>
           </figure>
-
           <figure
             style="display: inline-block; text-align: center; margin: 10px"
           >
@@ -115,10 +82,11 @@
                 width="200"
               />
             </a>
-            <figcaption>Instagram</figcaption>
+            <figcaption class="figcaption-footer">Instagram</figcaption>
           </figure>
         </div>
         <small>© 2025 Katrine</small>
       </footer>
+    </div>
   </body>
 </html>
