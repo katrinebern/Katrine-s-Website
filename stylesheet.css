@@ -8,6 +8,23 @@
   --hover: #f7bfd3;
 }
 
+/* Grid layout template */
+
+/*
+#container {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(5, 100px);
+  grid-template-areas: "header header header header header";
+}
+
+#container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  KIG LIGE PÅ OVENSTÅENDE SENERE!! */
+
 /* ==== Border-box ==== */
 /* border-box i stedet for content-box */
 * {
@@ -20,9 +37,12 @@
   background: var(--pink);
   border: 5px solid var(--green);
   padding: 0.5rem 1rem;
+  display: flex; /* for store skærme */
+  flex-flow: row wrap; /* for store skærme */
+  justify-content: flex-end; /* aligns items til enden af linjejn på main aksen for store skærme */
 }
 .site-nav a {
-  /* selector som gælder for links (a) inde et element med klassen .site-nav */
+  /* selector som gælder for links (markeret med "a") inde et element med klassen .site-nav */
   color: var(--green); /* henter farvevariablen fra root */
   text-decoration: none; /* fjerner understregning */
   font-weight: 600; /* tykkelse på skrift */
@@ -44,6 +64,20 @@ nav a.active,
 nav a[aria-current="page"] {
   background: var(--green); /* grøn baggrund */
   color: var(--pink); /* henter farvevariablen fra root */
+}
+
+/* nav bar justering mellem str. skærme */
+@media all and (max-width: 800px) {
+  .site-nav {
+    justify-content: space-around;
+  }
+}
+
+/* nav bar justering små skærme */
+@media all and (max-width: 520px) {
+  .site-nav {
+    flex-direction: column;
+  }
 }
 
 /* ==== Body ====*/
@@ -166,4 +200,16 @@ footer {
   color: var(--green); /* henter farvevariablen fra root */
   background: #ffffff80;
   border: 5px solid var(--green); /* tynd linje over footer for adskillelse */
+}
+
+/* Mobil-justering */
+@media (max-width: 520px) {
+  /* Gælder kun når skærmen er 520px bred eller mindre (mobil) */
+  body {
+    font-size: 0.95rem; /* Gør tekst en anelse mindre på små skærme (ca. 15px i stedet for 16px) */
+  }
+  th,
+  td {
+    padding: 8px; /* Mindsker luft inde i tabelceller, så tabellen fylder mindre på mobil */
+  }
 }
